@@ -1,8 +1,9 @@
-<h1>Todos</h1>
+<div class="container">
+  <h1>Todos</h1>
 
-<!-- <nxworkspace-todos [todos]="todos"></nxworkspace-todos> -->
-<ul>
-  <li *ngFor="let t of todos; let i = index">{{ t.title }} <button type="button" (click)="deleteTodo(i)">X</button></li>
-</ul>
+  <ul>
+    <li class="mb-2" *ngFor="let t of todos; let i = index">{{ t.title }} <button type="button" class="btn btn-danger" (click)="deleteTodo(i)">X</button></li>
+  </ul>
 
-<button id="add-todo" (click)="addTodo()">Add Todo</button>
+  <button class="btn btn-primary" id="add-todo" (click)="addTodo()">Add Todo</button>
+</div>

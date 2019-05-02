@@ -13,9 +13,20 @@ describe('AppService', () => {
     service = app.get<AppService>(AppService);
   });
 
-  describe('getData', () => {
+  describe('test app service', () => {
     it('should return a Todo list', () => {
-      expect(service.getData()).toEqual([{ title: 'Todo 1' }, { title: 'Todo 2' }]);
+      expect(service.getTodos()).toEqual([{ title: 'Todo 1' }, { title: 'Todo 2' }]);
+    });
+
+    it('should add a task', () => {
+      service.addTodo();
+      expect(service.getTodos().length).toBe(3);
+    });
+
+    it('should delete a task', () => {
+      console.log(service.getTodos());
+      service.deleteTodo(1);
+      expect(service.getTodos().length).toBe(2);
     });
   });
 });

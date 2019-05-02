@@ -1,4 +1,4 @@
-# Nxworkspace
+# Nx Workspace tutorial
 
 This project was generated using [Nx](https://nx.dev).
 
@@ -6,7 +6,21 @@ This project was generated using [Nx](https://nx.dev).
 
 🔎 **Nx is a set of Angular CLI power-ups for modern development.**
 
-## Quick Start & Documentation
+## Installation
+
+    npm install
+
+## Run the backend (Nest)
+
+The project will run at the port 3333:
+
+    ng serve api
+
+## Run the frontend (Angular app)
+
+    ng serve todos
+
+## Nx Quick Start & Documentation
 
 [30-minute video showing all Nx features](https://nx.dev/getting-started/what-is-nx)
 

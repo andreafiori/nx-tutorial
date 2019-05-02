@@ -30,7 +30,7 @@ describe('AppController', () => {
 
     it('should delete a Todo', () => {
       appController.deleteTodo(1);
-      expect(appController.getData().length).toEqual(1);
+      expect(appController.getData().length).toEqual(2);
     });
   });
 });

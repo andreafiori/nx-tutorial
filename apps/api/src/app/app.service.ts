@@ -6,7 +6,11 @@ import { Todo } from '@nxworkspace/data';
 export class AppService {
   todos: Todo[] = [{ title: 'Todo 1' }, { title: 'Todo 2' }];
 
-  getData(): Todo[] {
+  setTodos(todos: Todo[]) {
+    this.todos = todos;
+  }
+
+  getTodos(): Todo[] {
     return this.todos;
   }
 
@@ -15,7 +19,7 @@ export class AppService {
       title: `New todo ${Math.floor(Math.random() * 1000)}`
     });
   }
-  
+
   deleteTodo(index: number) {
     this.todos.splice(index, 1);
   }
